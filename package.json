@@ -27,7 +27,9 @@
     'url': 'https://github.com/avriette/xact-id-tiny/issues'
   },
   'dependencies': {
-    'moment': '>=2.4.0'
+    'moment': '>=2.4.0',
+    'assert': '*',
+    'mocha': '*'
   },
   'homepage': 'https://github.com/avriette/xact-id-tiny'
 }
