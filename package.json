@@ -30,6 +30,7 @@
     'moment': '>=2.4.0',
     'assert': '*',
     'mocha': '*'
+    'deep-grep': '>=0.0.3'
   },
   'homepage': 'https://github.com/avriette/xact-id-tiny'
 }
