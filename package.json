@@ -14,7 +14,6 @@
     'url': 'https://github.com/avriette/xact-id-tiny.git'
   },
   'keywords': [
-    'riak',
     'synchronous',
     'simple',
     'transaction',
@@ -29,8 +28,9 @@
   'dependencies': {
     'moment': '>=2.4.0',
     'assert': '*',
-    'mocha': '*'
-    'deep-grep': '>=0.0.3'
+    'mocha': '*',
+    'deep-grep': '>=0.3.2',
+    'singleton': '*'
   },
   'homepage': 'https://github.com/avriette/xact-id-tiny'
 }
