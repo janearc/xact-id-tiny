@@ -29,7 +29,6 @@
     'moment': '>=2.4.0',
     'assert': '*',
     'mocha': '*',
-    'deep-grep': '>=0.3.2',
     'singleton': '*'
   },
   'homepage': 'https://github.com/janearc/xact-id-tiny'
