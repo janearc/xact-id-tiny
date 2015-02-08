@@ -6,7 +6,7 @@ Keeping state sucks. Nobody wants to do it.
 If you find yourself in a situation where you are tracking transaction IDs
 (because, say, you have an asynchronous network app and you want to know how
 many are outstanding at any given time) you may feel like the code required to
-track your transactions is too large and pollutes and otherwise small codebase
+track your transactions is too large and pollutes an otherwise small codebase
 that just does whatever it's supposed to do.
 
 So let something else do the lifting for tracking transaction IDs and
