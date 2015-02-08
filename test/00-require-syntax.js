@@ -1,5 +1,5 @@
 var assert = require( 'assert' );
 it( 'require xit', function () {
-	var rrm = require( '../lib/xit' );
-	assert( rrm, 'require worked' );
+	var xit = require( '../lib/xit' );
+	assert( xit, 'require worked' );
 } );
