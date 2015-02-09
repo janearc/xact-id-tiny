@@ -25,11 +25,11 @@
   "bugs": {
     "url": "https://github.com/janearc/xact-id-tiny/issues"
   },
-  'dependencies': {
-    'moment': '>=2.4.0',
-    'assert': '*',
-    'mocha': '*',
-    'singleton': '*'
+  "dependencies": {
+    "moment": ">=2.4.0",
+    "assert": "*",
+    "mocha": "*",
+    "singleton": "*"
   },
   "homepage": "https://github.com/janearc/xact-id-tiny"
 }
