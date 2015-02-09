@@ -27,4 +27,17 @@ it( 'open a new xact', function () {
 
 	xit.add( xact );
 	assert( xact.opened != '', 'xact now has a truthy \'open\' stamp because it was added.' );
+	assert( xact.state == 'open', 'xact state is now \'open\'.' );
+} );
+
+it( 'close a xact', function () {
+	var book = xit.book
+		, xact = new xit.xact();
+
+	xit.add( xact );
+	assert( xact.opened != '', 'xact has a truthy \'open\' stamp after adding.' );
+	xit.end( xact );
+	assert( xact.closed != '', 'xact now has a truthy \'closed\' stamp because it was added.' );
+	assert( xact.state == 'closed', 'xact state is now \'closed\'.' );
+
 } );
