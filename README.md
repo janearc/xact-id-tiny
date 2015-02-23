@@ -18,7 +18,7 @@ quickly
 
 I know you're busy. Here's the real simple use pattern:
 
-```
+```javascript
 var xit  = require( 'xact-id-tiny' )
   , xact = xit.add_xact( );
 
@@ -33,7 +33,7 @@ Easy, right? The rest of the API is defined below.
 api
 ===
 
-```
+```javascript
 var n = xit.nonce()
 ```
 
@@ -42,7 +42,7 @@ actually stored in the register of open transactions. If you would like
 `xact-id-tiny` to use your fancy unique ID generator, just overwrite the
 `nonce()` function with your own.
 
-```
+```javascript
 var t = new xit.xact()
 var t = new xit.xact(serial)
 ```
@@ -52,7 +52,7 @@ Returns a `transaction` object suitable for use with `add_xact()` and
 providing your own or whatever), pass it in as an optional argument. The
 `transaction` object is very simple:
 
-```
+```javascript
 {
   'serial'  : nonce,
   'state'   : scalar, // 'open' or 'closed'
@@ -64,7 +64,7 @@ providing your own or whatever), pass it in as an optional argument. The
 You may pass in any object that contains these four keys and use it to keep
 state through transactions.
 
-```
+```javascript
 var xact = xit.add_xact( transaction );
 var xact = xit.add_xact( );
 ```
@@ -76,10 +76,31 @@ a hopefully-useful string.
 When called without arguments, it will create the transaction object for you,
 using the internal `nonce()` function.
 
-```
+```javascript
 var xact = xit.end_xact( transaction );
 var xact = xit.end_xact( serial );
 ```
 
 Attempts to "close" the transaction specified. Returns an `Error` with a
 hopefully-useful string in the event something goes wrong.
+
+```javascript
+var xact = xit.get_xact( transaction );
+var xact = xit.get_xact( serial );
+```
+
+Attempts to return to you a transaction object from either the transaction
+object (as it exists in the register, which may differ than what you have
+in your local code if you are doing things concurrently or in separate
+packages) or the serial that was used to track that object.
+
+extra stuff
+===
+
+* You may set the `comment` field of your transaction objects. When the
+  transaction is closed, if there is a comment ('opening a socket to foomatic
+  dot com' or whichever), this will be sent to `log4js` in the `INFO` facility
+  along with the delta for that transaction.
+* There's no magic to the objects. Theoretically, you can store anything you
+  like in them, and the api only pays attention to the four (five&hellip;) 
+  fields listed above.
