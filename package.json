@@ -1,7 +1,7 @@
 {
   "name": "xact-id-tiny",
-  "version": "0.0.5",
-  "description": "A tiny little transaction ID tracker.",
+  "version": "0.0.6",
+  "description": "A tiny transaction ID tracker.",
   "main": "lib/xit.js",
   "directories": {
     "test": "test"
@@ -18,6 +18,7 @@
     "simple",
     "transaction",
     "guid",
+    "xit",
     "nonce"
   ],
   "author": "Jane Arc <jane@cpan.org> (http://github.com/janearc)",
@@ -28,8 +29,7 @@
   "dependencies": {
     "moment": ">=2.4.0",
     "assert": "*",
-    "mocha": "*",
-    "singleton": "*"
+    "mocha": "*"
   },
   "homepage": "https://github.com/janearc/xact-id-tiny"
 }
