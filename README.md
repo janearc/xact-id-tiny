@@ -104,3 +104,10 @@ extra stuff
 * There's no magic to the objects. Theoretically, you can store anything you
   like in them, and the api only pays attention to the four (five&hellip;) 
   fields listed above.
+* Internally `xit` uses a function, `nonce`, to generate serial numbers. You
+  may overwrite this without ill-effect (although please make sure that they
+  are unique).
+* `nonce()` uses the parameter `len` to determine how many bytes to use for
+  serial numbers. It defaults to 4, but this may be changed by setting
+  `xit.len` to whichever. Note that smaller numbers are inherently
+  less-unique-ish.
