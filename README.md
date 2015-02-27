@@ -22,7 +22,7 @@ I know you're busy. Here's the real simple use pattern:
 var xit  = require( 'xact-id-tiny' )
   , xact = new xit.xact()
 
-xact = xit.add_xact( );
+xit.add_xact( xact );
 
 database.do_a_thing( args, function (e, rvalue) {
   if (e) { return new Error( 'gasp! database breakage!' ) }
