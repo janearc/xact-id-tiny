@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "moment": ">=2.4.0",
+    "log4js": "*",
     "assert": "*",
     "mocha": "*",
     "singleton": "*"
