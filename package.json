@@ -20,16 +20,16 @@
     "guid",
     "nonce"
   ],
-  "author": "Jane Arc <jane@cpan.org> (http://github.com/janearc)",
+  "author": "Jane Arc <jane.arc@pobox.com> (http://github.com/janearc)",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/janearc/xact-id-tiny/issues"
   },
   "dependencies": {
-    "moment": ">=2.4.0",
-    "log4js": "*",
     "assert": "*",
-    "mocha": "*",
+    "log4js": "*",
+    "mocha": "^11.1.0",
+    "moment": "^2.30.1",
     "singleton": "*"
   },
   "homepage": "https://github.com/janearc/xact-id-tiny"
